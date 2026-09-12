@@ -1,20 +1,15 @@
-"""CLI — argparse wrapper exposing an `export` command."""
+"""Command-line entry point: python -m abletonBundler --als ... --output ..."""
 
 import argparse
-from typing import List, Optional
+
+from .exporter import exportProject
 
 
-class CLI:
-    def _buildParser(self) -> argparse.ArgumentParser:
-        """Build and return an argparse.ArgumentParser with an "export"
-        subcommand that takes required --als and --output arguments."""
-        # TODO: implement
-        pass
+def main() -> None:
+    """Parse --als / --output CLI args and call exportProject()."""
+    # TODO: implement
+    pass
 
-    def run(self, argv: Optional[List[str]] = None) -> int:
-        """Parse argv (or sys.argv if None), and for the "export" command
-        construct an ExportManager and call exportProject(), printing the
-        resulting zip path on success or an error message on failure.
-        Return a process exit code (0 for success, non-zero for failure)."""
-        # TODO: implement
-        pass
+
+if __name__ == "__main__":
+    main()
